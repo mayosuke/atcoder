@@ -16,8 +16,18 @@ def sol1(a,b,c):
     else:
         return a
 
+def sol2(a,b,c):
+    if a == b:
+        return c
+    elif b == c:
+        return a
+    elif c == a:
+        return b
+    else:
+        return 0
+
 def sol(a,b,c):
-    return sol1(a,b,c)
+    return sol2(a,b,c)
 
 def test_1():
     assert sol(2, 5, 2) == 5
@@ -44,3 +54,14 @@ def test_3():
 # 			print(k)
 # else:
 # 	print(a)
+
+# sol2 (AC, refered: https://atcoder.jp/contests/abc203/editorial/1948)
+# a,b,c = map(int, input().split())
+# if a == b:
+# 	print(c)
+# elif b == c:
+# 	print(a)
+# elif c == a:
+# 	print(b)
+# else:
+# 	print(0)
